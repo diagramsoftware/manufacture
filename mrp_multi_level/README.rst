@@ -50,33 +50,54 @@ Key Features
 Configuration
 =============
 
-* Go to *Manufacturing > MRP > MRP Area* and define or edit any existing area.
-  You can specify the working hours for every area.
+MRP Areas
+~~~~~~~~~
+
+* Go to *Manufacturing > Configuration > MRP Areas* and define or edit
+  any existing area. You can specify the working hours for every area.
+
+Product MRP Area Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Go to *Manufacturing > Master Data > Product MRP Area Parameters* and set
+  the MRP parameters for a given product and area.
 
 Usage
 =====
 
 To manually run the MRP scheduler:
 
-#. Go to *Manufacturing > MRP > Run MRP Multi Level*.
+#. Go to *Manufacturing > Operations > Run MRP Multi Level*.
 #. On the wizard click *Run MRP*.
 
 To launch replenishment orders (moves, purchases, production orders...):
 
-#. Go to *Manufacturing > MRP > MRP Inventory*.
+#. Go to *Manufacturing > Operations > MRP Inventory*.
 #. Filter with *To procure*.
 #. Select multiple records and click on *Action > Procure* or click the right
    hand side gears in any record.
 #. On the wizard, check everything is ok and click *Execute*.
 
-Known issues / Roadmap
-======================
-
-* The functionality related to field *Nbr. Days* in products is not
-  functional for the time being. Please, stay tuned to future updates.
-
 Changelog
 =========
+
+11.0.2.1.0 (2019-04-02)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Implement *Nbr. Days* functionality to be able to group demand when
+  generating supply proposals.
+  (`#345 <https://github.com/OCA/manufacture/pull/345>`_):
+
+11.0.2.0.0 (2018-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [REW] Refactor MRP Area.
+  (`#322 <https://github.com/OCA/manufacture/pull/322>`_):
+
+  * MRP product concept dropped in favor of *Product MRP Area Parameters*.
+    This allow to set different MRP parameters for the same product in
+    different areas.
+  * Menu items reordering.
 
 11.0.1.1.0 (2018-08-30)
 ~~~~~~~~~~~~~~~~~~~~~~~
